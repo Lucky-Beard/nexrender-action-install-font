@@ -69,6 +69,7 @@ copyFile = async (source, destination) => {
         console.log("Successfully copied font");
       }).catch((err) => {
         console.log("Copying error ocurred: ", err);
+        throw new Error(err)
       });
   } else {
     console.log("Font already exists");
