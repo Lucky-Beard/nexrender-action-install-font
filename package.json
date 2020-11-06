@@ -1,6 +1,6 @@
 {
   "name": "nexrender-action-install-font",
-  "version": "1.0.1",
+  "version": "1.0.4",
   "description": "Installs supplied fonts to local system for use in nexrender prerendering action",
   "main": "index.js",
   "scripts": {
