@@ -19,5 +19,6 @@
   "bugs": {
     "url": "https://github.com/Lucky-Beard/nexrender-action-install-font/issues"
   },
-  "homepage": "https://github.com/Lucky-Beard/nexrender-action-install-font#readme"
+  "homepage": "https://github.com/Lucky-Beard/nexrender-action-install-font#readme",
+  "dependencies": {}
 }
