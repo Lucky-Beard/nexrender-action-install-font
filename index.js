@@ -34,7 +34,11 @@ module.exports = (job, settings, { fonts, workingDirectory }, type) => {
   });
 
   return Promise.all(promises).then(res => {
-    console.log("SUCCESSFULLY INSTALLED FONT", res);
+    if (res.find(item => item === 'Font already exists')) {
+      console.log("Font is already installed")
+    } else {
+      console.log("Font has been installed successfully")
+    }
     return Promise.resolve(job);
   }).catch(err => {
     console.log("Failed to install font", err);
