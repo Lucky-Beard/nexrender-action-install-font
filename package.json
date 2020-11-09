@@ -1,7 +1,7 @@
 {
   "name": "nexrender-action-install-font",
-  "version": "1.0.5",
-  "description": "Installs supplied fonts to local system for use in nexrender prerendering action",
+  "version": "1.0.6",
+  "description": "This library is for use as a font installer during the nexrender prerender phase for windows machines. It will install a font that you supplied as a static asset and will work without a restart.",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -14,7 +14,7 @@
     "Nexrender",
     "Fonts"
   ],
-  "author": "Morne Erasmus",
+  "author": "Lucky Beard",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/Lucky-Beard/nexrender-action-install-font/issues"

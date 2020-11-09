@@ -11,8 +11,14 @@ const FONT_DIR = 'c:\\Windows\\Fonts\\';
 module.exports = (job, settings, { fonts, workingDirectory }, type) => {
   const WORKING_DIR = `${workingDirectory}/${job.uid}`;
 
-  if (!fonts.length) {
-    return "Make sure to specify a font as a string array e.g. ['FontName.ttf']";
+  // return Promise.reject(new Error('FAILURE'));
+
+  if (!workingDirectory) {
+   return Promise.reject(new Error('Make sure to specify a working directory'));
+  }
+
+  if ( !fonts || !fonts.length) {
+    return Promise.reject(new Error("No fonts specified, Make sure to specify a font as a string array e.g. ['FontName.ttf']"));
   }
 
   let promises = fonts.map(async (font) => {
