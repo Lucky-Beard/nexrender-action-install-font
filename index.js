@@ -11,13 +11,11 @@ const FONT_DIR = 'c:\\Windows\\Fonts\\';
 module.exports = (job, settings, { fonts, workingDirectory }, type) => {
   const WORKING_DIR = `${workingDirectory}/${job.uid}`;
 
-  // return Promise.reject(new Error('FAILURE'));
-
   if (!workingDirectory) {
-   return Promise.reject(new Error('Make sure to specify a working directory'));
+    return Promise.reject(new Error('Make sure to specify a working directory'));
   }
 
-  if ( !fonts || !fonts.length) {
+  if (!fonts || !fonts.length) {
     return Promise.reject(new Error("No fonts specified, Make sure to specify a font as a string array e.g. ['FontName.ttf']"));
   }
 
@@ -25,7 +23,7 @@ module.exports = (job, settings, { fonts, workingDirectory }, type) => {
 
     const extensionPos = font.indexOf('.');
     if (extensionPos < 0) {
-      return 'Incorrect font name supplied, should be name plus extension e.g. Arial.ttf';
+     return Promise.reject(new Error('Incorrect font name supplied, should be name plus extension e.g. Arial.ttf'))
     }
     const fontName = font.substr(0, extensionPos);
 
@@ -47,7 +45,7 @@ module.exports = (job, settings, { fonts, workingDirectory }, type) => {
     }
     return Promise.resolve(job);
   }).catch(err => {
-    console.log("Failed to install font", err);
+    console.log("Failed to completely install the font, some errors occurred during installation", err);
     return Promise.reject(err);
   })
 };

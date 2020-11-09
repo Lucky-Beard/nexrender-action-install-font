@@ -63,7 +63,7 @@ actions: {
 ```
 
 ## How it works
-The module will install the font from the working directory using the supplied name and extension e.g. workingdirectory/Pixelfy.ttf. It adds an entry to the windows registry(HKLM) and copies the font to your c:/windows/fonts directory.
+The module will install the font from the working directory using the supplied name and extension e.g. workingdirectory/Pixelfy.ttf. It adds an entry to the windows registry(HKLM) and copies the font to your `'c:/windows/fonts'` directory.
 
 ## Other
 Feel free to use as you wish, you're welcome to fork or add PR's to the exising project :) Enjoy.
