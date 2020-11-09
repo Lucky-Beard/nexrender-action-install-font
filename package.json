@@ -1,6 +1,6 @@
 {
   "name": "nexrender-action-install-font",
-  "version": "1.0.6",
+  "version": "1.0.7",
   "description": "This library is for use as a font installer during the nexrender prerender phase for windows machines. It will install a font that you supplied as a static asset and will work without a restart.",
   "main": "index.js",
   "scripts": {
